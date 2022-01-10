@@ -66,7 +66,19 @@ std::ostream& client::operator<<(std::ostream& os, Client& c)
 	os << ", ";
 	os << c.getId();
 	os << " ";
+	os << c.toString();
 
 	return os;
 }
+std::string client::Client::toString() {
+	std::string res = "";
+	for (int i = 0; i < _cart.size(); i++) {
+		res += _cart.at(i).toString();
+		if (i != _cart.size() - 1)
+		{
+			res += "\n";
+		}
+	}
 
+	return res;
+}

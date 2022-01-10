@@ -23,7 +23,7 @@ namespace client {
 		void clearCart();
 		void setQuantity(Product prdct, int quantity);
 		void delProductToCart(Product prdct);
-
+		std::string toString();
 	};
 	std::ostream& operator<<(std::ostream& os, Client& c);
 	
