@@ -66,6 +66,8 @@ std::ostream& client::operator<<(std::ostream& os, Client& c)
 	os << ", ";
 	os << c.getId();
 	os << " ";
+	os << "Produits dans le panier:";
+	os << std::endl;
 	os << c.toString();
 
 	return os;
