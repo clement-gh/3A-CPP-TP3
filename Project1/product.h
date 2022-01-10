@@ -15,6 +15,5 @@ class Product {
 		std::string _title;
 		std::string _description;
 		float _price;
-		int _quantity=1;
-
+		int _quantity;
 };
