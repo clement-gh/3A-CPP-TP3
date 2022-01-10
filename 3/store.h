@@ -17,7 +17,9 @@ class Store {
 
 		std::string toString();
 
-		void findProduct();
+		void findProduct(std::string nameOfProduct);
+
+		void updateQuantity(std::string nameOfProduct, int quantity);
 
 	private :
 		std::string _name;

@@ -22,7 +22,11 @@ int main () {
 	std::cout << store.toString() << std::endl; 
 
 	//Afficher le produit recherché
-	store.findProduct();
+	store.findProduct("PS4");
+
+	//
+	store.updateQuantity("PS3", 3);
+	store.findProduct("PS4");
 
 	std::cout << "Fin du programme" << std::endl;
 
