@@ -1,3 +1,4 @@
+#include <iostream>
 #include <string>
 
 class Product {
@@ -17,3 +18,5 @@ class Product {
 		float _price;
 		int _quantity;
 };
+
+std::ostream& operator<<(std::ostream& os, Product& prdct);
