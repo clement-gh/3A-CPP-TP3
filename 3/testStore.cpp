@@ -15,10 +15,14 @@ int main () {
 
 	store.addProduct(p2);
 
-	std::cout << store.toString() << std::endl; 
-
 	//Pour afficher p1 uniquement
 	//std::cout << p1.toString() << std::endl;
+
+	//Afficher les produits enregistré dans le magasin
+	std::cout << store.toString() << std::endl; 
+
+	//Afficher le produit recherché
+	store.findProduct();
 
 	std::cout << "Fin du programme" << std::endl;
 

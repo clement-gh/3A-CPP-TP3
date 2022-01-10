@@ -16,6 +16,9 @@ class Store {
 		void addProduct(Product prdct);
 
 		std::string toString();
+
+		void findProduct();
+
 	private :
 		std::string _name;
 
