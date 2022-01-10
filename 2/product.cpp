@@ -23,3 +23,22 @@ int Product::getQuantity() const {
 void Product::updateQuantity(int quantity) {
 	_quantity = quantity;
 }
+
+std::ostream& operator<<(std::ostream& os, Product& prdct) {
+	os << "Informations du produit : ";
+	os << std::endl;
+	os << "Produit : ";
+	os << prdct.getTitle();
+	os << std::endl;
+	os << "Description : " ;
+	os << prdct.getDescription();
+	os << std::endl;
+	os << "Prix : ";
+	os << prdct.getPrice();
+	os << " €";
+	os << std::endl;
+	os << "Quantité : ";
+	os << prdct.getQuantity();
+
+	return os;
+}
