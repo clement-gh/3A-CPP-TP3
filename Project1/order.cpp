@@ -27,10 +27,12 @@ std::string Order::displayProducts() {
 }
 
 std::ostream& operator<<(std::ostream& os, Order& ordr) {
+	os << "---Informations sur la commande---";
+	os << std::endl;
 	os << "Client : ";
 	os << ordr.getId();
 	os << std::endl;
-	os << "---Liste des produits---";
+	os << "Liste des produits : ";
 	os << std::endl;
 	os << ordr.displayProducts();
 	os << std::endl;
