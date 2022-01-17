@@ -19,7 +19,7 @@ class Store {
 		void toStringProducts();
 		void toStringClients();
 		void findProduct(std::string nameOfProduct);
-
+		void findClient(std::string nameOfClient);
 		void updateQuantity(std::string nameOfProduct, int quantity);
 		void addClient(client::Client& client);
 		
@@ -47,6 +47,5 @@ template <typename T > std::string display(const std::vector<T>  elems){
 	return res;
 
 };
-
 
 #endif

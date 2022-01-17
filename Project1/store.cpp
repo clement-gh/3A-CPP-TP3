@@ -36,6 +36,23 @@ void Store::findProduct(std::string nameOfProduct) {
 	}
 }
 
+void Store::findClient(std::string nameOfClient)
+{
+	client::Client res("", "");
+	
+	for (int i = 0; i < _clients.size(); i++) {
+		if ((_clients.at(i).getSurname() == nameOfClient) || (_clients.at(i).getId() == nameOfClient)) {
+			std::cout << "Produit trouvé\n";
+			std::cout << _clients.at(i).toString();
+			res = _clients.at(i);
+		}
+
+	}
+	if ((res.getSurname() != nameOfClient) || (res.getId() != nameOfClient)) {
+		std::cout << "Aucun résultat\n";
+	}
+}
+
 void Store::updateQuantity(std::string nameOfProduct, int quantity) {
 	Product res("","",0,0);
 	for(int i=0; i <_products.size(); i++) {
