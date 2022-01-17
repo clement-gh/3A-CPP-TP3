@@ -24,3 +24,32 @@ std::string Store::toString() {
 
 	return res;
 }
+
+void Store::findProduct(std::string nameOfProduct) {
+	Product res("","",0,0);
+	for(int i=0; i <_products.size(); i++) {
+		if (_products.at(i).getTitle() == nameOfProduct) {
+			std::cout << "Produit trouvé\n";
+			std::cout << _products.at(i).toString();
+			res = _products.at(i);
+		}
+
+	}
+	if (res.getTitle() != nameOfProduct) {
+		std::cout << "Aucun résultat\n";
+	}
+}
+
+void Store::updateQuantity(std::string nameOfProduct, int quantity) {
+	Product res("","",0,0);
+	for(int i=0; i <_products.size(); i++) {
+		if (_products.at(i).getTitle() == nameOfProduct) {
+			_products.at(i).updateQuantity(quantity);
+			res = _products.at(i);
+		}
+
+	}
+	if (res.getTitle() != nameOfProduct) {
+	std::cout << "Erreur ! \n";
+	}
+}
