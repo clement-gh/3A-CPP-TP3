@@ -13,6 +13,7 @@ int main ()
 	std::cout << "Prix : " << p1.getPrice() << " €" << std::endl;
 	std::cout << "Quatité : " << p1.getQuantity() << std::endl;
 
+	std::cout << p1 << std::endl;
 	//Modification de la quantité
 	p1.updateQuantity(9);
 	std::cout << "La nouvelle quantité est de : " << p1.getQuantity() << std::endl;

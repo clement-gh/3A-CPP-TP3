@@ -42,3 +42,23 @@ std::string Product::toString() const {
 void Product::updateQuantity(int quantity) {
 	_quantity = quantity;
 }
+
+std::ostream& operator<<(std::ostream& res, Product& prdct)
+{
+	 res << "";
+	res << "Produit : ";
+	res << prdct.getTitle();
+	res << std::endl;
+	res << "Description : ";
+	res << prdct.getDescription();
+	res << std::endl;
+	res<< "Prix : ";
+	res << prdct.getPrice();
+	res << " €";
+	res << std::endl;;
+	res << "Quantité : ";
+	res << prdct.getQuantity();
+	res << std::endl;
+
+	return res;
+}
