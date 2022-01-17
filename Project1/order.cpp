@@ -12,6 +12,14 @@ bool Order::getStatus() const {
 	return _status;
 }
 
+void Order::displayStatus() {
+	if (_status == 0) {
+		std::cout << "N'a pas été livré" << std::endl;
+	} else if (_status == 1) {
+		std::cout << "A été livré" << std::endl;
+	}
+}
+
 //affichage des produits du client
 std::string Order::displayProducts() {
 	std::string res = "";
@@ -37,6 +45,8 @@ std::ostream& operator<<(std::ostream& os, Order& ordr) {
 	os << ordr.displayProducts();
 	os << std::endl;
 	os << "Statut : ";
-	os << ordr.getStatus();
+	ordr.displayStatus();
 	os << std::endl;
+
+	return os;
 }
