@@ -1,8 +1,8 @@
 #include "client.h"
 
-client::Client::Client(std::string firstname, std::string surname, std::vector<Product> cart)
+client::Client::Client(std::string firstname, std::string surname) : _firstname(firstname), _surname(surname) 
 {
-	initializeId();
+	this->initializeId();
 }
 
 std::string client::Client::getFirstname()const

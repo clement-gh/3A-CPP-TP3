@@ -14,7 +14,7 @@ namespace client {
 		std::string _id;
 
 	public:
-		Client(std::string firstname, std::string surname, std::vector<Product> cart);
+		Client(std::string firstname, std::string surname);
 		std::string getFirstname()const;
 		std::string getSurname()const;
 		std::string getId()const;
