@@ -22,8 +22,6 @@ int Product::getQuantity() const {
 
 std::string Product::toString() const {
 	std::string res ="";
-	res += "Informations du produit : ";
-	res += "\n";
 	res += "Produit : ";
 	res += _title;
 	res += "\n";
