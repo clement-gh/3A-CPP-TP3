@@ -16,17 +16,37 @@ class Store {
 
 		void addProduct(Product& prdct);
 
-		std::string toString();
-
+		void toStringProducts();
+		void toStringClients();
 		void findProduct(std::string nameOfProduct);
 
 		void updateQuantity(std::string nameOfProduct, int quantity);
 		void addClient(client::Client& client);
+		
 
+		
 	private :
 		std::string _name;
 		std::vector <client::Client> _clients;
 		std::vector<Product> _products;
 };
+
+
+template <typename T > std::string display(const std::vector<T>  elems){
+
+	std::string res = "";
+
+	for (int i = 0; i < elems.size(); i++) {
+		res += elems.at(i).toString();
+		if (i != elems.size() - 1)
+		{
+			res += "\n";
+		}
+	}
+
+	return res;
+
+};
+
 
 #endif

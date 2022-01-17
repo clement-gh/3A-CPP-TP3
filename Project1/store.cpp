@@ -12,17 +12,13 @@ void Store::addProduct(Product& prdct) {
 	_products.push_back(prdct);
 }
 
-std::string Store::toString() { //affiche tout les produits du magasin
-	std::string res = "";
-	for(int i=0; i<_products.size(); i++) {
-		res += _products.at(i).toString();
-		if (i != _products.size()-1)
-		{
-			res += "\n";
-		}
-	}
+void Store::toStringProducts() { //affiche tout les produits du magasin
+std::cout << display<Product>(_products) << std::endl;
+}
 
-	return res;
+void Store::toStringClients()
+{
+	std::cout << display<Product>(_products) << std::endl;
 }
 
 void Store::findProduct(std::string nameOfProduct) {
@@ -58,3 +54,5 @@ void Store::addClient(client::Client& client) // ajout d'un client dans la liste
 {
 	_clients.push_back(client);
 }
+
+
