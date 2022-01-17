@@ -25,6 +25,7 @@ namespace client {
 		void delProductToCart(Product prdct);
 		std::string toString();
 	};
+	
 	std::ostream& operator<<(std::ostream& os, Client& c);
 	
 };

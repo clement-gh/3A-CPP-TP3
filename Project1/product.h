@@ -23,6 +23,6 @@ class Product {
 		int _quantity;
 };
 
-std::ostream& operator<<(std::ostream& res, Product& prdct);
+std::ostream& operator<<(std::ostream& os, Product& prdct);
 
 #endif

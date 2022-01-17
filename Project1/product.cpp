@@ -43,9 +43,10 @@ void Product::updateQuantity(int quantity) {
 	_quantity = quantity;
 }
 
+//surcharge de <<
 std::ostream& operator<<(std::ostream& res, Product& prdct)
 {
-	 res << "";
+	res << "";
 	res << "Produit : ";
 	res << prdct.getTitle();
 	res << std::endl;
