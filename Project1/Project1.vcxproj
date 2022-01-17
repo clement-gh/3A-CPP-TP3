@@ -140,12 +140,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="client.cpp" />
+    <ClCompile Include="order.cpp" />
     <ClCompile Include="product.cpp" />
     <ClCompile Include="store.cpp" />
-    <ClCompile Include="testProduct.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="client.h" />
+    <ClInclude Include="order.h" />
     <ClInclude Include="product.h" />
     <ClInclude Include="store.h" />
   </ItemGroup>

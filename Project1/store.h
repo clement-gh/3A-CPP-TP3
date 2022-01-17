@@ -2,6 +2,7 @@
 #include <vector>
 #include "product.h"
 #include "client.h"
+#include "order.h"
 
 #ifndef STORE_H
 #define STORE_H
@@ -28,10 +29,16 @@ class Store {
 		void delProductToCart(Product product, client::Client client);
 		void updateQuantityOfProduct(Product product, client::Client client ,int quantity);
 		
+		void updateStatusOfOrder(Order& order);
+
+		void confirmOrder(Order& order);
+
+
 	private :
 		std::string _name;
 		std::vector <client::Client> _clients;
 		std::vector<Product> _products;
+		std::vector<Order> _orders;
 };
 
 

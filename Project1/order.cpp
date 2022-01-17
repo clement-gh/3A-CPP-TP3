@@ -1,6 +1,6 @@
 #include "order.h"
 
-Order::Order(client::Client id, std::vector<Product> products, bool status) : _id(id), _products(products), _status(status) {
+Order::Order(client::Client id, std::vector<Product> products, int status) : _id(id), _products(products), _status(status) {
 
 }
 
@@ -8,7 +8,7 @@ std::string Order::getId() const {
 	return _id.getId();
 }
 
-bool Order::getStatus() const {
+int Order::getStatus() const {
 	return _status;
 }
 

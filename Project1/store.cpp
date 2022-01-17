@@ -89,4 +89,17 @@ void Store::updateQuantityOfProduct(Product product, client::Client client, int 
 
 }
 
+void Store::updateStatusOfOrder(Order& order)
+{
+
+}
+
+
+
+void Store::confirmOrder(Order& order)
+{
+	_orders.push_back(order);
+	std::cout << "Commande validée" << std::endl;
+}
+
 

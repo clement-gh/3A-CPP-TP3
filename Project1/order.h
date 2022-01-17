@@ -5,20 +5,23 @@
 
 #ifndef ORDER_H
 #define ORDER_H
-
+enum  status {
+	livree=2 , pas_livree=0 , en_cours=1
+ 
+ };
 class Order {
 	public :
-		Order(client::Client id, std::vector<Product> products, bool status);
+		Order(client::Client id, std::vector<Product> products, int status);
 
 		std::string getId() const;
-		bool getStatus() const;
-
+		int getStatus() const;
+		//void setSatus( status);
 		std::string displayProducts();
 
 	private :
 		client::Client _id;
 		std::vector<Product> _products;
-		bool _status; // 0 = pas livrée et 1 = livrée
+	int _status =  status::pas_livree ; // 0 = pas livrée et 1 = livrée
 };
 
 std::ostream& operator<<(std::ostream& os, Order& ordr);
