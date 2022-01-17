@@ -15,8 +15,11 @@ int Order::getStatus() const {
 void Order::displayStatus() {
 	if (_status == 0) {
 		std::cout << "N'a pas été livré" << std::endl;
-	} else if (_status == 1) {
+	} else if (_status == 2) {
 		std::cout << "A été livré" << std::endl;
+	}
+	else if (_status == 1) {
+		std::cout << "En cours de livraison" << std::endl;
 	}
 }
 

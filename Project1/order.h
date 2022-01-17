@@ -17,6 +17,7 @@ class Order {
 		int getStatus() const;
 		//void setSatus( status);
 		std::string displayProducts();
+		void displayStatus();
 
 	private :
 		client::Client _id;
