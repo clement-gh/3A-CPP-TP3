@@ -22,7 +22,7 @@ std::string client::Client::getId() const
 
 void client::Client::initializeId()
 {
-	std::string firstChar = _firstname.substr(0, 1); //permet d'avoir id du type cghys à partir de clement en prénom et ghys en nom
+	std::string firstChar = _firstname.substr(0, 1); //permet d'avoir id du type cghys Ã  partir de clement en prÃ©nom et ghys en nom
 	_id = firstChar + _surname;
 }
 
@@ -59,19 +59,22 @@ void client::Client::delProductToCart(Product prdct)
 
 std::ostream& client::operator<<(std::ostream& os, Client& c)
 {
-	os << "Informations sur le lecteur : ";
+	os << "---Informations sur le client---";
+	os << std::endl;
 	os << c.getFirstname();
 	os << ", ";
 	os << c.getSurname();
 	os << ", ";
 	os << c.getId();
-	os << " ";
-	os << "Produits dans le panier:";
+	os << std::endl;
+	os << "---Produits dans le panier---";
 	os << std::endl;
 	os << c.toString();
 
 	return os;
 }
+
+//affichage des produits du client
 std::string client::Client::toString() {
 	std::string res = "";
 	for (int i = 0; i < _cart.size(); i++) {
