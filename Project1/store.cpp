@@ -72,4 +72,21 @@ void Store::addClient(client::Client& client) // ajout d'un client dans la liste
 	_clients.push_back(client);
 }
 
+void Store::addProductToCart(Product product, client::Client client)
+{
+	client.addProductToCart(product);
+
+}
+
+void Store::delProductToCart(Product product, client::Client client)
+{
+	client.delProductToCart(product);
+}
+
+void Store::updateQuantityOfProduct(Product product, client::Client client, int quantity)
+{
+	client.setQuantity(product, quantity);
+
+}
+
 

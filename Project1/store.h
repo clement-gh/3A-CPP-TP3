@@ -22,8 +22,11 @@ class Store {
 		void findClient(std::string nameOfClient);
 		void updateQuantity(std::string nameOfProduct, int quantity);
 		void addClient(client::Client& client);
-		
 
+
+		void addProductToCart(Product product, client::Client client);
+		void delProductToCart(Product product, client::Client client);
+		void updateQuantityOfProduct(Product product, client::Client client ,int quantity);
 		
 	private :
 		std::string _name;
