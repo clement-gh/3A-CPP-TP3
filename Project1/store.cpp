@@ -8,11 +8,11 @@ std::string Store::getName() const {
 	return _name;
 }
 
-void Store::addProduct(Product prdct) {
+void Store::addProduct(Product& prdct) {
 	_products.push_back(prdct);
 }
 
-std::string Store::toString() {
+std::string Store::toString() { //affiche tout les produits du magasin
 	std::string res = "";
 	for(int i=0; i<_products.size(); i++) {
 		res += _products.at(i).toString();
@@ -52,4 +52,9 @@ void Store::updateQuantity(std::string nameOfProduct, int quantity) {
 	if (res.getTitle() != nameOfProduct) {
 	std::cout << "Erreur ! \n";
 	}
+}
+
+void Store::addClient(client::Client& client) // ajout d'un client dans la liste de client du magasin
+{
+	_clients.push_back(client);
 }
