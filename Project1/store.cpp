@@ -1,7 +1,11 @@
 #include "store.h"
 
-Store::Store(std::string name) : _name(name) {
+Store::Store(std::string name)  {
 
+}
+
+Store::Store():_name("mystore")
+{
 }
 
 std::string Store::getName() const {
@@ -123,6 +127,14 @@ void Store::updateStatusOfOrder(status stat, int orderNumber)
 void Store::confirmOrder(std::string nameclient)
 {
 	client::Client& client = findClient(nameclient); 
+	for (int i = 0; i < _products.size(); i++) {
+		for (int j = 0; j < client.getCart().size();j++) {
+			if (_products.at(i).getTitle()== client.getCart().at(j).getTitle()) {
+				_products.at(i).updateQuantity((_products.at(i).getQuantity()) - (client.getCart().at(j).getQuantity()));
+			}
+			}
+
+	}
 	Order order(client, client.getCart());
 	client.clearCart();
 

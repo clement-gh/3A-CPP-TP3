@@ -139,17 +139,35 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="application.cpp" />
     <ClCompile Include="client.cpp" />
+    <ClCompile Include="controller.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="observer.cpp" />
     <ClCompile Include="order.cpp" />
     <ClCompile Include="product.cpp" />
     <ClCompile Include="store.cpp" />
-    <ClCompile Include="testOrder.cpp" />
+    <ClCompile Include="subject.cpp" />
+    <ClCompile Include="view-client.cpp" />
+    <ClCompile Include="view-order.cpp" />
+    <ClCompile Include="view-store.cpp" />
+    <ClCompile Include="view.cpp" />
+    <ClCompile Include="viewmenu.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="application.h" />
     <ClInclude Include="client.h" />
+    <ClInclude Include="controller.h" />
+    <ClInclude Include="observer.h" />
     <ClInclude Include="order.h" />
     <ClInclude Include="product.h" />
     <ClInclude Include="store.h" />
+    <ClInclude Include="subject.h" />
+    <ClInclude Include="view-client.h" />
+    <ClInclude Include="view-order.h" />
+    <ClInclude Include="view-store.h" />
+    <ClInclude Include="view.h" />
+    <ClInclude Include="viewmenu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

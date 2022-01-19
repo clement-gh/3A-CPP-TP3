@@ -8,10 +8,11 @@
 #ifndef STORE_H
 #define STORE_H
 
-class Store {
+class Store
+{
 	public :
 		Store(std::string name);
-
+		Store();
 		std::string getName() const;
 
 		
