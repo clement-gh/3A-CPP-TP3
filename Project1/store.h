@@ -3,6 +3,7 @@
 #include "product.h"
 #include "client.h"
 #include "order.h"
+#include <typeinfo>
 
 #ifndef STORE_H
 #define STORE_H
@@ -14,25 +15,33 @@ class Store {
 		std::string getName() const;
 
 		
-
+		//magasin
+		//add
 		void addProduct(Product& prdct);
-
+		void addClient(client::Client& client);
+		//affichage
 		void toStringProducts();
 		void toStringClients();
-		void findProduct(std::string nameOfProduct);
-		void findClient(std::string nameOfClient);
-		void updateQuantity(std::string nameOfProduct, int quantity);
-		void addClient(client::Client& client);
-
-
-		void addProductToCart(Product product, client::Client client);
-		void delProductToCart(Product product, client::Client client);
-		void updateQuantityOfProduct(Product product, client::Client client ,int quantity);
+		void toStringorders(); //question 7c
 		
-		void updateStatusOfOrder(Order& order);
+		bool verifquantity(std::string nameproduct, int quantity);
+		void updateQuantityToStore(std::string nameOfProduct, int quantity);
+	
 
-		void confirmOrder(Order& order);
+		//find
+		Product findProduct(std::string nameOfProduct, std::vector<Product> list);
+		client::Client& findClient(std::string nameOfClient);
 
+		//panier
+		void addProductToCart( std::string client, std::string nameproduct, int quantity);
+		void delProductToCart(std::string client, std::string );
+		void updateQuantityToCart(std::string nameclient, std::string nameproduct, int quantity);
+		
+		//order
+		void updateStatusOfOrder(status stat, int orderNumber);
+		void confirmOrder(std::string nameclient);
+		void toStringAllOrdersOfClient(std::string nameclient);
+	
 
 	private :
 		std::string _name;
@@ -41,21 +50,20 @@ class Store {
 		std::vector<Order> _orders;
 };
 
-
-template <typename T > std::string display(const std::vector<T>  elems){
-
-	std::string res = "";
+//evite de faire 3 surcharges
+template <typename T > std::ostream &operator<<(std::ostream& res, std::vector<T>&  elems ){
 
 	for (int i = 0; i < elems.size(); i++) {
-		res += elems.at(i).toString();
+		res << elems.at(i);
 		if (i != elems.size() - 1)
 		{
-			res += "\n";
+			res << std::endl;
 		}
 	}
 
 	return res;
-
 };
 
+
 #endif
+
