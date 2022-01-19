@@ -1,26 +1,37 @@
 #include "order.h"
 
-Order::Order(client::Client id, std::vector<Product> products, int status) : _id(id), _products(products), _status(status) {
-
+Order::Order(client::Client clientOrder, std::vector<Product> products) : _clientOrder(clientOrder), _products(products){
+	srand(time(NULL));
+	_orderNumber = rand() % 100000 + 1; //creer un numero de commande entre 1 et 10 0000
 }
 
 std::string Order::getId() const {
-	return _id.getId();
+	return _clientOrder.getId();
 }
 
 int Order::getStatus() const {
 	return _status;
 }
 
+void Order::setSatus(status stat)
+{
+	_status = stat;
+}
+
 void Order::displayStatus() {
-	if (_status == 0) {
-		std::cout << "N'a pas été livré" << std::endl;
-	} else if (_status == 2) {
-		std::cout << "A été livré" << std::endl;
+	if (_status == pas_livree) {
+		std::cout << "N a pas ete livree" << std::endl;
+	} else if (_status == livree) {
+		std::cout << "A ete livre" << std::endl;
 	}
-	else if (_status == 1) {
+	else if (_status == en_cours) {
 		std::cout << "En cours de livraison" << std::endl;
 	}
+}
+
+int Order::getOrderNumber()
+{
+	return _orderNumber;
 }
 
 //affichage des produits du client
@@ -43,6 +54,8 @@ std::ostream& operator<<(std::ostream& os, Order& ordr) {
 	os << "Client : ";
 	os << ordr.getId();
 	os << std::endl;
+	os << "Numero de commande: ";
+	os << ordr.getOrderNumber();
 	os << "Liste des produits : ";
 	os << std::endl;
 	os << ordr.displayProducts();
