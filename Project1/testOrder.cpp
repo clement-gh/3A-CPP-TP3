@@ -17,10 +17,17 @@ int main () {
 	//Afficher les informations du client (identifiants + produits dans le panier)
 	std::cout << c1 << std::endl;
 
-	Order myOrder(c1,{p1,p2},false);
+	Order myOrder(c1,{p1,p2});
 
+
+	myOrder.displayStatus();
+	myOrder.setSatus(status::en_cours);
+	
+	myOrder.displayStatus();
+
+	std::cout << myOrder.getOrderNumber() << std::endl;
 	//Afficher les produits de la commande
-	std::cout << myOrder << std::endl; 
+	//std::cout << myOrder << std::endl; 
 
 	std::cout << "---Fin du programme---" << std::endl;
 
