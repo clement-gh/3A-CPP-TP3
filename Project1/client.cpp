@@ -20,6 +20,11 @@ std::string client::Client::getId() const
 	return _id;
 }
 
+std::vector<Product> client::Client::getCart() const
+{
+	return _cart;
+}
+
 void client::Client::initializeId()
 {
 	std::string firstChar = _firstname.substr(0, 1); //permet d'avoir id du type cghys à partir de clement en prénom et ghys en nom

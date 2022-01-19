@@ -18,6 +18,7 @@ namespace client {
 		std::string getFirstname()const;
 		std::string getSurname()const;
 		std::string getId()const;
+		std::vector<Product> getCart() const;
 		void initializeId();
 		void addProductToCart(Product prdct);
 		void clearCart();
