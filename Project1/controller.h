@@ -26,9 +26,11 @@ public:
 	void displayOrdersOfAClient();
 	
 	//menu client
-	std::string getNameOfClient();
+	std::string getNameOfClient()const;
 	void setNameOfClient();
 	void delNameofClient();
+	void displayClient();
+	
 
 	void addProcuctInCart();
 	void delPoductToCart();

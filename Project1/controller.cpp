@@ -27,7 +27,7 @@ std::string Controller::setLocalName()
 	return name;
 }
 
-std::string Controller::getNameOfClient()
+std::string Controller::getNameOfClient()const
 {
 	return _nameclient;
 }
@@ -37,7 +37,20 @@ void Controller::setNameOfClient()
 
 	std::cout << "Saisisez le Nom du client" << std::endl;
 	std::cin >> _nameclient;
-	
+
+	if (_mystore.checkClientExist(_nameclient) == false) {
+		std::cout << "Client Introuvable " << std::endl;
+		std::cout << "1. Rentrer un nouveau client" << std::endl;
+		std::cout << "0. retour au menu principal" << std::endl;
+		int x;
+		do {
+			std::cin >> x;
+			if(x==0)
+			this->setScreen(x);
+			if(x==1){ this->setScreen(2); }
+
+		} while (x >1 || x<0);
+	}
 	
 }
 
@@ -45,6 +58,13 @@ void Controller::delNameofClient()
 {
 	_nameclient = "";
 }
+
+void Controller::displayClient()
+{
+	std::cout << "ID client:" << _mystore.findClient(_nameclient).getId() << std::endl;
+}
+
+
 
 void Controller::addProcuctInCart(){
 	int quantity;

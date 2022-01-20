@@ -43,7 +43,7 @@ class Store
 		void confirmOrder(std::string nameclient);
 		void toStringAllOrdersOfClient(std::string nameclient);
 	
-
+		bool checkClientExist(std::string nameOfClient);
 	private :
 		std::string _name;
 		std::vector <client::Client> _clients;

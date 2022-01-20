@@ -79,6 +79,12 @@ std::ostream& client::operator<<(std::ostream& os, Client& c)
 	return os;
 }
 
+bool client::operator!=(Client& c1, Client& c2)
+{ 
+	if (c1.getFirstname() == c2.getFirstname() && c1.getSurname() == c2.getSurname()) { return false; }
+	else return true;
+}
+
 //affichage des produits du client
 std::string client::Client::toString() {
 	std::string res = "";

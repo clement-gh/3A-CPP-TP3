@@ -21,7 +21,7 @@ void ViewClient::display()
 		clear();
 		View::display();
 		
-		std::cout << "Menu gestion des clients" << std::endl << std::endl;
+		controller.displayClient();
 		std::cout << "\t\t1. Ajout produit dans le panier" << std::endl;
 		std::cout << "\t\t2. Supression d'un produit du panier" << std::endl;
 		std::cout << "\t\t3. Affichage du panier" << std::endl;

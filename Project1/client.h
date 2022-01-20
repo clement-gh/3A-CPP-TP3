@@ -28,5 +28,5 @@ namespace client {
 	};
 	
 	std::ostream& operator<<(std::ostream& os, Client& c);
-	
+	bool operator!=(Client& c1, Client& c2);
 };

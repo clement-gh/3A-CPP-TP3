@@ -52,21 +52,18 @@ Product Store::findProduct(std::string nameOfProduct, std::vector<Product> list)
 
 client::Client& Store::findClient(std::string nameOfClient)
 {
-	client::Client res("", "");
+	//client::Client res("", "");
 	
 	for (int i = 0; i < _clients.size(); i++) {
 		if ((_clients.at(i).getSurname() == nameOfClient) || (_clients.at(i).getId() == nameOfClient)) {
 			//std::cout << "Client trouvé\n";
 			//std::cout << _clients.at(i).toString();
-			res = _clients.at(i);
+			//res = _clients.at(i);
 			return  _clients.at(i);
 		}
 
 	}
-	if ((res.getSurname() != nameOfClient) || (res.getId() != nameOfClient)) {
-		std::cout << "Aucun résultat, client non trouvé" << std::endl;
-		
-	}
+	
 	
 }
 
@@ -160,6 +157,15 @@ void Store::toStringAllOrdersOfClient(std::string nameclient)
 	}
 }
 
+bool Store::checkClientExist(std::string nameOfClient)
+{
+	for (int it = 0; it != _clients.size(); ++it) {
+		if(_clients.at(it).getSurname()==nameOfClient){ return true; }
+	}
+	 return false;
+	
+}
+
 bool Store::verifquantity(std::string nameproduct, int quantity)
 {
 	//verifie que le produit selectionné est en quantité suffisante ou egale a la quantité passée en paramètre
@@ -174,5 +180,9 @@ bool Store::verifquantity(std::string nameproduct, int quantity)
 	else
 		return false;
 }
+/*
+if ((res.getSurname() != nameOfClient) || (res.getId() != nameOfClient)) {
+	std::cout << "Aucun résultat, client non trouvé" << std::endl;
 
-
+}
+*/
