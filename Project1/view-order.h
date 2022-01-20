@@ -22,5 +22,7 @@ public:
 	 * Displays the view
 	 */
 	virtual void display();
+
+
 };
 

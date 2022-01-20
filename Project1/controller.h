@@ -11,11 +11,14 @@ public:
 	Controller();
 	void setScreen(const int& idViews);
 	int getCurrentScreen();
+	std::string setNameOfClient();
 	void displayproductsOfStore();
 	void updateQuantityOfProduct();
 	void addProductToStore();
 	void displayAllClient();
 	void displayAllOrder();
-	
+	void confirmAOrder();
+	void updateSatusOrder();
+	void displayOrdersOfAClient();
 
 };

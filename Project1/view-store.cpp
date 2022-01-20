@@ -10,15 +10,6 @@ void ViewStore::notify()
 	if (this->controller.getCurrentScreen() == 1)
 		this->display();
 }
-void ViewStore::waiting() {
-	int wait;
-	do {
-		std::cout << "Appuiez sur 0 puis sur Entrer pour revenir au menu." << std::endl;
-		std::cin >> wait;
-		
-	} while (wait != 0);
-	clear();
-}
 
 
 void ViewStore::display()

@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Fichiers d%27en-tête\NewFilter1">
-      <UniqueIdentifier>{912b94b5-6f42-4ee2-842c-c2b9fd4090ac}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Fichiers sources\NewFilter1">
       <UniqueIdentifier>{209db86d-2185-43ce-b388-5859d9d466a0}</UniqueIdentifier>
     </Filter>
@@ -24,6 +21,9 @@
     </Filter>
     <Filter Include="Fichiers d%27en-tête\Menu">
       <UniqueIdentifier>{003eb5b8-f660-45f2-967d-29a1432db301}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Store">
+      <UniqueIdentifier>{912b94b5-6f42-4ee2-842c-c2b9fd4090ac}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -75,16 +75,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="client.h">
-      <Filter>Fichiers d%27en-tête\NewFilter1</Filter>
+      <Filter>Fichiers d%27en-tête\Store</Filter>
     </ClInclude>
     <ClInclude Include="order.h">
-      <Filter>Fichiers d%27en-tête\NewFilter1</Filter>
+      <Filter>Fichiers d%27en-tête\Store</Filter>
     </ClInclude>
     <ClInclude Include="product.h">
-      <Filter>Fichiers d%27en-tête\NewFilter1</Filter>
+      <Filter>Fichiers d%27en-tête\Store</Filter>
     </ClInclude>
     <ClInclude Include="store.h">
-      <Filter>Fichiers d%27en-tête\NewFilter1</Filter>
+      <Filter>Fichiers d%27en-tête\Store</Filter>
     </ClInclude>
     <ClInclude Include="application.h">
       <Filter>Fichiers d%27en-tête\Menu</Filter>

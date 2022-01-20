@@ -21,7 +21,7 @@ public:
 	 * Clears console
 	 */
 	void clear() const;
-
+	void	waiting()const;
 	/**
 	 * Displays generic dialog
 	 */
