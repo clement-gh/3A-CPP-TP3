@@ -64,7 +64,7 @@ client::Client& Store::findClient(std::string nameOfClient)
 
 	}
 	if ((res.getSurname() != nameOfClient) || (res.getId() != nameOfClient)) {
-		std::cout << "Aucun résultat\n";
+		std::cout << "Aucun résultat, client non trouvé" << std::endl;
 		
 	}
 	
@@ -126,20 +126,24 @@ void Store::updateStatusOfOrder(status stat, int orderNumber)
 
 void Store::confirmOrder(std::string nameclient)
 {
-	client::Client& client = findClient(nameclient); 
-	for (int i = 0; i < _products.size(); i++) {
-		for (int j = 0; j < client.getCart().size();j++) {
-			if (_products.at(i).getTitle()== client.getCart().at(j).getTitle()) {
-				_products.at(i).updateQuantity((_products.at(i).getQuantity()) - (client.getCart().at(j).getQuantity()));
-			}
+	client::Client& client = findClient(nameclient);
+	if (client.getCart().empty() == false) {
+
+		for (int i = 0; i < _products.size(); i++) {
+			for (int j = 0; j < client.getCart().size(); j++) {
+				if (_products.at(i).getTitle() == client.getCart().at(j).getTitle()) {
+					_products.at(i).updateQuantity((_products.at(i).getQuantity()) - (client.getCart().at(j).getQuantity()));
+				}
 			}
 
+		}
+		Order order(client, client.getCart());
+		client.clearCart();
+
+		_orders.push_back(order);
+		std::cout << "Commande validée" << std::endl;
 	}
-	Order order(client, client.getCart());
-	client.clearCart();
-
-	_orders.push_back(order);
-	std::cout << "Commande validée" << std::endl;
+	else { std::cout << "Le panier de "<< client.getFirstname()<< " " << client.getSurname() << "est vide." << std::endl; }
 }
 
 void Store::toStringAllOrdersOfClient(std::string nameclient)
