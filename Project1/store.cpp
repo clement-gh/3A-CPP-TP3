@@ -85,7 +85,7 @@ void Store::updateQuantityToStore(std::string nameOfProduct, int quantity) {
 	}
 }
 
-void Store::addClient(client::Client& client) // ajout d'un client dans la liste de client du magasin
+void Store::addClient(client::Client client) // ajout d'un client dans la liste de client du magasin
 {
 	_clients.push_back(client);
 }

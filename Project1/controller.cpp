@@ -19,7 +19,7 @@ int Controller::getCurrentScreen()
 	return this->currentScreen;
 }
 
-std::string Controller::setNameOfClient()
+std::string Controller::setLocalName()
 {
 	std::string name;
 	std::cout << "Saisisez le Nom du client" << std::endl;
@@ -27,17 +27,78 @@ std::string Controller::setNameOfClient()
 	return name;
 }
 
+std::string Controller::getNameOfClient()
+{
+	return _nameclient;
+}
+
+void Controller::setNameOfClient()
+{
+
+	std::cout << "Saisisez le Nom du client" << std::endl;
+	std::cin >> _nameclient;
+	
+	
+}
+
+void Controller::delNameofClient()
+{
+	_nameclient = "";
+}
+
+void Controller::addProcuctInCart(){
+	int quantity;
+	std::string product;
+	std::cout << "Entrez un nom de produit a ajouter au panier:" << std::endl;
+	std::cin >> product;
+	std::cout << "Entrez une quantite:" << std::endl;
+	std::cin >> quantity;
+	_mystore.addProductToCart(_nameclient, product, quantity);
+}
+
+void Controller::delPoductToCart()
+{
+	std::string product;
+	std::cout << "Entrez un nom de produit a ajouter au panier:" << std::endl;
+	std::cin >> product;
+	_mystore.delProductToCart(_nameclient, product);
+}
+
+void Controller::displayCart()
+{
+	std::cout << "Produits dans le panier:" << std::endl;
+	_mystore.findClient(_nameclient).toString();
+
+}
+
+void Controller::clearCart()
+{
+	_mystore.findClient(_nameclient).clearCart();
+	std::cout << "Panier vide !" << std::endl;
+}
+
+void Controller::updateProductQuantityCart()
+{
+	int quantity;
+	std::string product;
+	std::cout << "Entrez un nom de produit a ajouter au panier:" << std::endl;
+	std::cin >> product;
+	std::cout << "Entrez une quantite:" << std::endl;
+	std::cin >> quantity;
+	_mystore.updateQuantityToCart(_nameclient,product,quantity );
+}
+
 void Controller::displayproductsOfStore()
 {
+	std::cout << "Liste des produits du magasin: " << std::endl;
 	_mystore.toStringProducts();
 	
 }
 
 void Controller::updateQuantityOfProduct()
 {
-	std::string nameproduct;
-	std::cout << "Saisisez un nom de produit:" << std::endl;
-	std::cin >> nameproduct;
+
+	std::string nameproduct = this->setLocalName();
 	int quantity = 0;
 	std::cout << "Saisisez une quantité:" << std::endl;
 	std::cin >> quantity;
@@ -53,9 +114,9 @@ void Controller::addProductToStore()
 	double price = 0;
 	int quantity = 0;
 	std::cout << "Entrez le nom du produit:" << std::endl;
-	std::cin >> title; //getline permet de rentrer plusieurs chines de caractères avec des espaces
+	std::cin >> title; 
 	std::cout << "Entrez la description du produit:" << std::endl;
-	std::cin >> description;
+	std::cin >> description; //ne pas entrer d'espaces sinon plante
 	std::cout << "Entrez le prix du produit:" << std::endl;
 	std::cin >> price;
 	std::cout << "Entrez la quantite du produit:" << std::endl;
@@ -76,7 +137,7 @@ void Controller::displayAllOrder()
 
 void Controller::confirmAOrder()
 {
-	std::string name = this->setNameOfClient();
+	 std::string name = this->setLocalName();
 
 	_mystore.confirmOrder(name);
 
@@ -114,8 +175,23 @@ void Controller::updateSatusOrder()
 
 void Controller::displayOrdersOfAClient()
 {
-	std::string name = this->setNameOfClient();
+	std::string name = this->setLocalName();
 	_mystore.toStringAllOrdersOfClient(name);
+}
+
+void Controller::displayInfoCilent()
+{
+	std::cout << _mystore.findClient(_nameclient)<<std::endl;
+}
+
+void Controller::addclientNew()
+{
+	std::string firstname;
+	std::string surname = this->setLocalName();
+	std::cout << "Saisisez le prenom du client" << std::endl;
+	std::cin >> firstname;
+	_mystore.addClient(client::Client(firstname, surname));
+
 }
 
 

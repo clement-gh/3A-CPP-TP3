@@ -55,9 +55,9 @@ std::ostream& operator<<(std::ostream& res, Product& prdct)
 	res << std::endl;
 	res<< "Prix : ";
 	res << prdct.getPrice();
-	res << " €";
+	res << " Euros";
 	res << std::endl;;
-	res << "Quantité : ";
+	res << "Quantite : ";
 	res << prdct.getQuantity();
 	res << std::endl;
 

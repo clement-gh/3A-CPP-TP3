@@ -19,7 +19,7 @@ class Store
 		//magasin
 		//add
 		void addProduct(Product& prdct);
-		void addClient(client::Client& client);
+		void addClient(client::Client client);
 		//affichage
 		void toStringProducts();
 		void toStringClients();

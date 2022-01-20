@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Fichiers sources\NewFilter1">
-      <UniqueIdentifier>{209db86d-2185-43ce-b388-5859d9d466a0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Fichiers sources\Menu">
       <UniqueIdentifier>{13275f8a-ce78-4c46-a20d-d59d4f01b30f}</UniqueIdentifier>
     </Filter>
@@ -25,19 +22,28 @@
     <Filter Include="Fichiers d%27en-tête\Store">
       <UniqueIdentifier>{912b94b5-6f42-4ee2-842c-c2b9fd4090ac}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers sources\Store">
+      <UniqueIdentifier>{209db86d-2185-43ce-b388-5859d9d466a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Menu\Views">
+      <UniqueIdentifier>{62d9c8c5-94f1-43f2-8365-a5099ce7a093}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Menu\Views">
+      <UniqueIdentifier>{aa6597a8-c603-4d15-99af-40330463b3d5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="client.cpp">
-      <Filter>Fichiers sources\NewFilter1</Filter>
+      <Filter>Fichiers sources\Store</Filter>
     </ClCompile>
     <ClCompile Include="order.cpp">
-      <Filter>Fichiers sources\NewFilter1</Filter>
+      <Filter>Fichiers sources\Store</Filter>
     </ClCompile>
     <ClCompile Include="product.cpp">
-      <Filter>Fichiers sources\NewFilter1</Filter>
+      <Filter>Fichiers sources\Store</Filter>
     </ClCompile>
     <ClCompile Include="store.cpp">
-      <Filter>Fichiers sources\NewFilter1</Filter>
+      <Filter>Fichiers sources\Store</Filter>
     </ClCompile>
     <ClCompile Include="application.cpp">
       <Filter>Fichiers sources\Menu</Filter>
@@ -51,26 +57,26 @@
     <ClCompile Include="observer.cpp">
       <Filter>Fichiers sources\Menu</Filter>
     </ClCompile>
-    <ClCompile Include="viewmenu.cpp">
-      <Filter>Fichiers sources\Menu</Filter>
-    </ClCompile>
-    <ClCompile Include="view.cpp">
-      <Filter>Fichiers sources\Menu</Filter>
-    </ClCompile>
     <ClCompile Include="subject.cpp">
       <Filter>Fichiers sources\Menu</Filter>
     </ClCompile>
-    <ClCompile Include="view-client.cpp">
-      <Filter>Fichiers sources\Menu</Filter>
+    <ClCompile Include="view4.cpp">
+      <Filter>Fichiers sources\Menu\Views</Filter>
     </ClCompile>
-    <ClCompile Include="view-store.cpp">
-      <Filter>Fichiers sources\Menu</Filter>
+    <ClCompile Include="view.cpp">
+      <Filter>Fichiers sources\Menu\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="view-client.cpp">
+      <Filter>Fichiers sources\Menu\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="viewmenu.cpp">
+      <Filter>Fichiers sources\Menu\Views</Filter>
     </ClCompile>
     <ClCompile Include="view-order.cpp">
-      <Filter>Fichiers sources\Menu</Filter>
+      <Filter>Fichiers sources\Menu\Views</Filter>
     </ClCompile>
-    <ClCompile Include="view4.cpp">
-      <Filter>Fichiers sources\Menu</Filter>
+    <ClCompile Include="view-store.cpp">
+      <Filter>Fichiers sources\Menu\Views</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -98,23 +104,23 @@
     <ClInclude Include="subject.h">
       <Filter>Fichiers d%27en-tête\Menu</Filter>
     </ClInclude>
-    <ClInclude Include="view.h">
-      <Filter>Fichiers d%27en-tête\Menu</Filter>
+    <ClInclude Include="view-store.h">
+      <Filter>Fichiers d%27en-tête\Menu\Views</Filter>
     </ClInclude>
     <ClInclude Include="viewmenu.h">
-      <Filter>Fichiers d%27en-tête\Menu</Filter>
-    </ClInclude>
-    <ClInclude Include="view-store.h">
-      <Filter>Fichiers d%27en-tête\Menu</Filter>
-    </ClInclude>
-    <ClInclude Include="view-client.h">
-      <Filter>Fichiers d%27en-tête\Menu</Filter>
+      <Filter>Fichiers d%27en-tête\Menu\Views</Filter>
     </ClInclude>
     <ClInclude Include="view-order.h">
-      <Filter>Fichiers d%27en-tête\Menu</Filter>
+      <Filter>Fichiers d%27en-tête\Menu\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="view-client.h">
+      <Filter>Fichiers d%27en-tête\Menu\Views</Filter>
     </ClInclude>
     <ClInclude Include="view4.h">
-      <Filter>Fichiers d%27en-tête\Menu</Filter>
+      <Filter>Fichiers d%27en-tête\Menu\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="view.h">
+      <Filter>Fichiers d%27en-tête\Menu\Views</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
