@@ -10,6 +10,7 @@ Application::Application()
 	this->viewClient = new ViewClient(*this->controller);
 	this->viewOrder = new ViewOrder(*this->controller);
 	this->viewStore = new ViewStore(*this->controller);
+	this->view4= new View4(*this->controller);
 
 }
 

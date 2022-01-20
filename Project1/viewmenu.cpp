@@ -23,6 +23,7 @@ void ViewMenu::display()
 		std::cout << "\t\t1. Menu gestion du magasin" << std::endl;
 		std::cout << "\t\t2. Menu gestion des clients" << std::endl;
 		std::cout << "\t\t3. Menu gestion des commandes" << std::endl;
+		//::cout << "\t\t4. Gestion des fichiers" << std::endl;
 		std::cout << "\t\t--------------------------------------------" << std::endl;
 		std::cout << "\t\t9. Quitter" << std::endl;
 		std::cin >> choice;

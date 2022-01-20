@@ -22,6 +22,7 @@ int Controller::getCurrentScreen()
 void Controller::displayproductsOfStore()
 {
 	_mystore.toStringProducts();
+	
 }
 
 void Controller::updateQuantityOfProduct()
@@ -39,14 +40,14 @@ void Controller::updateQuantityOfProduct()
 
 void Controller::addProductToStore()
 {
-	std::string title;
-	char description[50];
+	std::string title, description;
+	
 	double price = 0;
 	int quantity = 0;
 	std::cout << "Entrez le nom du produit:" << std::endl;
 	std::cin >> title; //getline permet de rentrer plusieurs chines de caractères avec des espaces
 	std::cout << "Entrez la description du produit:" << std::endl;
-	std::cin.getline( description,50);
+	std::cin >> description;
 	std::cout << "Entrez le prix du produit:" << std::endl;
 	std::cin >> price;
 	std::cout << "Entrez la quantite du produit:" << std::endl;

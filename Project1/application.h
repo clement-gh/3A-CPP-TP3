@@ -4,6 +4,7 @@
 #include "view-client.h"
 #include "view-order.h"
 #include"view-store.h"
+#include "view4.h"
 
 class Application
 {
@@ -13,6 +14,8 @@ private:
 	ViewClient* viewClient;
 	ViewOrder* viewOrder;
 	ViewStore* viewStore;
+	View4* view4;
+	
 public:
 	/**
 	 * Constructor
