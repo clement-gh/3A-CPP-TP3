@@ -14,7 +14,7 @@ class Store
 		Store(std::string name);
 		Store();
 		std::string getName() const;
-
+	
 		
 		//magasin
 		//add

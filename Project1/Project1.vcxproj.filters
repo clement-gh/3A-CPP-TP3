@@ -60,9 +60,6 @@
     <ClCompile Include="subject.cpp">
       <Filter>Fichiers sources\Menu</Filter>
     </ClCompile>
-    <ClCompile Include="view4.cpp">
-      <Filter>Fichiers sources\Menu\Views</Filter>
-    </ClCompile>
     <ClCompile Include="view.cpp">
       <Filter>Fichiers sources\Menu\Views</Filter>
     </ClCompile>
@@ -114,9 +111,6 @@
       <Filter>Fichiers d%27en-tête\Menu\Views</Filter>
     </ClInclude>
     <ClInclude Include="view-client.h">
-      <Filter>Fichiers d%27en-tête\Menu\Views</Filter>
-    </ClInclude>
-    <ClInclude Include="view4.h">
       <Filter>Fichiers d%27en-tête\Menu\Views</Filter>
     </ClInclude>
     <ClInclude Include="view.h">
