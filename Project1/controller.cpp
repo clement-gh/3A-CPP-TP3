@@ -40,7 +40,7 @@ void Controller::setNameOfClient()
 
 	if (_mystore.checkClientExist(_nameclient) == false) {
 		std::cout << "Client Introuvable " << std::endl;
-		std::cout << "1. Rentrer un nouveau client" << std::endl;
+		std::cout << "1. Chercher un autre client" << std::endl;
 		std::cout << "0. retour au menu principal" << std::endl;
 		int x;
 		do {
